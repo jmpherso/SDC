@@ -1,0 +1,75 @@
+.AddQuestion, .MoreQuestionsButton, .loadFewerQuestionsButton {
+  /* font-weight: bold; */
+  height: 50px;
+  margin-right: 20px;
+  border: 1px solid rgba(39, 50, 39, 0.7);
+  border-radius: 5px;
+  color: rgba(39, 50, 39, 0.8);
+  font-weight: 500;
+}
+
+.AddQuestion:hover, 
+.MoreQuestionsButton:hover, 
+.loadFewerQuestionsButton:hover {
+  background-color: rgba(39, 50, 39, 0.3);
+  color:rgba(39, 50, 39, 0.8);
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .AddQuestion:hover, 
+  .MoreQuestionsButton:hover, 
+  .loadFewerQuestionsButton:hover {
+    background-color: #646F58;
+    color:whitesmoke;
+  }
+}
+
+
+.QuestionAnswersBlock {
+  width: 100%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  font-family: "adobe-clean", sans-serif;
+}
+
+.QAButtons {
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.NewQuestionModal {
+  max-width: 30%;
+  left: 35%;
+  top: 15%;
+  position: absolute;
+  background-color: hwb(12 91% 7%);
+  box-shadow: 1px 1px 5px grey;
+  object-fit: cover;
+  object-position: 30% 30%;
+}
+
+.NewQuestionOverlay {
+  background-color: rgba(39, 50, 39, 0.5);
+  position: fixed;
+  inset: 0px;
+}
+
+#NewQuestionClose {
+  position: absolute;
+  right: 5px; 
+  top: 5px;
+  cursor: pointer;
+}
+
+#NewQuestionClose:hover {
+  cursor: pointer;
+}
+
+.QuestionModal {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 15%; 
+}

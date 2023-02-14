@@ -1,0 +1,88 @@
+.AddAnswerButton, .answerYes, .Report{
+  cursor: pointer;
+}
+
+.answerYes:hover,
+.Report:hover {
+  font-style: italic;
+}
+
+.answerBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.answerBody, .answerInfo {
+  display: flex;
+  margin-top: 10px;
+}
+.answerPhotos {
+  display: flex;
+}
+
+.expandedPhoto {
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+
+}
+
+.singlePhoto {
+  position: relative;
+  margin:auto;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.singlePhotoContainer {
+  max-width: 30%;
+  left: 35%;
+  top: 15%;
+  position: absolute;
+  background-color: hwb(12 91% 7%);
+  box-shadow: 1px 1px 5px grey;
+  object-fit: cover;
+  object-position: 30% 30%;
+}
+
+svg.close {
+  margin: 0 auto;
+  margin-top: 3.5px;
+  right: 15%;
+  color: rgb(112, 10, 10);
+}
+svg.close:hover {
+  color: brown;
+}
+
+.closeButtonContainer {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: rgb(148, 148, 148);
+}
+
+.singlePhotoDiv {
+  padding-right: 5px;
+}
+
+.answerYes {
+  margin-right: 3px;
+}
+
+.markedtrue {
+  color: rgb(218, 165, 32);
+}
+.helpfulBlock {
+  margin-right: 10px;
+}
+
+.expandedPhotoOverlay {
+  background-color: rgba(39, 50, 39, 0.5);
+  position: fixed;
+  inset: 0px;
+}

@@ -1,0 +1,64 @@
+#overviewFooter {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 1%;
+}
+
+.productDescription {
+  width: 77%;
+  border-style: none solid none none;
+}
+
+.socialMedia {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#itemDescription {
+  display: flex;
+  padding-top: 1%;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-right: 7px;
+}
+
+.smIcon {
+  display: flex;
+  justify-content: space-around;
+  color: black;
+  font-size: 24px;
+}
+a {
+  color: black;
+}
+
+#facebook:hover {
+  color: blue;
+}
+
+#twitter:hover {
+  color: lightskyblue;
+}
+
+#pinterest:hover {
+  color: red;
+}
+
+#productFeatures {
+  width: 25%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.featureText {
+  display: flex;
+  padding-left: 5%;
+}
+
+.featureText svg {
+  font-size: 20px;
+}

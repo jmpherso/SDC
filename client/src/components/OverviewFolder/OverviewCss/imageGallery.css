@@ -1,0 +1,160 @@
+
+#imageGallery {
+  position: relative;
+  width: 70%;
+  padding: 1%;
+  box-shadow: 1px 1px 3px grey;
+}
+
+#main{
+  background-color: hwb(10 81% 16%);
+  width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#main:hover{
+  cursor: -moz-zoom-in;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+#mainPhoto {
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  object-fit: fill;
+  object-position: 30% 30%;
+}
+
+#horizontalCarousel {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  width: 90px;
+  height: 580px;
+  overflow-y: scroll;
+}
+
+#horizontalCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+#topScroll {
+  background-color: transparent;
+  position: absolute;
+  top: 1.8%;
+  left: 8%;
+  color: white;
+  font-size: 21px;
+  opacity: .50;
+  border: none;
+}
+
+#topScroll:hover {
+  opacity: 1;
+}
+
+#botScroll {
+  background-color: transparent;
+  position: absolute;
+  bottom: 1.8%;
+  left: 8%;
+  color: white;
+  font-size: 21px;
+  opacity: .50;
+  border: none;
+}
+
+#botScroll:hover {
+  opacity: 1;
+}
+
+#rightScroll {
+  background-color: transparent;
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  font-size: 40px;
+  opacity: .50;
+  border: 2px solid;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  mix-blend-mode: difference;
+}
+
+#rightScroll:hover {
+  color: brown;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+#leftScroll {
+  background-color: transparent;
+  position: absolute;
+  left: 18%;
+  top: 50%;
+  font-size: 40px;
+  border: 2px solid;
+  opacity: .50;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  mix-blend-mode: difference;
+}
+
+#leftScroll:hover {
+  color: brown;
+  opacity: 1;
+  mix-blend-mode: normal;
+}
+
+#carouselThumbnail {
+  width: 100%;
+}
+
+.column {
+  width: 100%;
+  height: 75px;
+  object-fit: cover;
+  object-position: 30% 30%;
+  border-radius: 5%;
+  opacity: .90;
+  /* margin-top: 10%; */
+  margin-bottom: 10%;
+  border: 1px solid black;
+
+}
+
+.column:hover {
+  opacity: 1;
+}
+
+.expand {
+  position: absolute;
+  right: 1.7%;
+  top: 2%;
+  font-size: xx-large;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.expand:hover {
+  cursor: pointer;
+}
+
+#expandview {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+
+#test {
+  height: 100%;
+}

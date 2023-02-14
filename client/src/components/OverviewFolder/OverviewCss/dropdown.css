@@ -1,0 +1,17 @@
+#qDropdown {
+  width: 30%;
+}
+#sizeDropdown {
+  width: 60%;
+}
+#qSelect {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+#sizeSelect {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+

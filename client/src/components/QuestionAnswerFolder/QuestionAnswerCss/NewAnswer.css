@@ -1,0 +1,20 @@
+.newAnswerForm {
+    width: 100%;
+    padding-left: 1.5%;
+    padding-bottom: 1%;
+    border: 1px solid whitesmoke;
+}
+
+.submitButton {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.submitButton:hover {
+    cursor: pointer;
+}
+
+.redStar {
+    color:red
+}
+

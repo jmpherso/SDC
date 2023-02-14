@@ -1,0 +1,82 @@
+.QBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.QABoldStyle {
+  font-size: '20px';
+  font-weight: 'bold';
+}
+.QBlock{
+  position: relative;
+  margin-top: 10px;
+}
+.Qhelpful {
+  position: absolute;
+  right: 0px;
+  display: flex;
+}
+
+.individualQuestion {
+  display: flex;
+  flex-direction: column;
+}
+
+.LoadMoreAnswers {
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: left;
+  font-weight: bold;
+  background: none;
+	border: none;
+	padding: 0;
+	outline: inherit;
+  border-style: none none solid none;
+}
+
+.LoadMoreAnswers:hover {
+  font-style: italic;
+}
+
+.questionYes {
+  cursor: pointer;
+}
+.questionYes:hover {
+  font-style: italic;
+}
+.AddAnswerButton:hover {
+  font-style: italic;
+}
+
+#NewAnswerClose {
+  position: absolute;
+  right: 5px; 
+  top: 5px;
+  cursor: pointer;
+}
+.markedtrue {
+  color: rgb(218, 165, 32);
+  margin-right: 10px;
+}
+.markedfalse {
+  margin-right: 10px;
+}
+#NewAnswerClose:hover {
+  cursor: pointer;
+}
+.AnswerModalOverlay {
+  background-color: rgba(39, 50, 39, 0.5);
+  position: fixed;
+  inset: 0px;
+}
+.AnswerModal {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 15%; 
+}
+.questionYes {
+  padding-right: 3px;
+}

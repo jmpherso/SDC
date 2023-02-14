@@ -1,0 +1,293 @@
+#randr {
+  display: flex;
+  width: 100%
+}
+#rlink h4 {
+  color: rgba(39, 50, 39, 0.7);
+
+}
+
+/* #randrtitle {
+  padding-left: 1%
+} */
+
+#breakdown {
+  position: relative;
+  max-width:100%;
+  /* padding-right: 1%; */
+}
+
+#product-breakdown {
+  padding-top: 20%;
+}
+
+#review-list {
+  position: relative;
+  padding-left: 1%;
+  width: 100%;
+}
+
+#reviews-list {
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow: auto;
+  box-shadow: 1px 1px 3px grey;
+}
+
+/* Sort Options drop down */
+
+/* sort div */
+.sort-styled {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start
+
+}
+.sort-label {
+  padding-right: 5px;
+}
+
+select {
+  border-radius: 4px;
+  font-style: inherit;
+  background-color: rgb(255, 254, 255);
+  color: rgba(39, 50, 39, 0.8);
+  height: 25px;
+  cursor: pointer;
+}
+
+
+/* review list div  */
+.review-btns {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+
+
+.review-btns button,
+.remove-filter-btn,
+.remove-filter-star {
+  border: 1px solid rgba(39, 50, 39, 0.7);
+  border-radius: 5px;
+  color: rgba(39, 50, 39, 0.8);
+  font-weight: 500;  
+  cursor: pointer;
+}
+
+.review-btns button {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.review-btns button:hover,
+.remove-filter-btn:hover,
+.remove-filter-star:hover {
+  background-color: rgba(39, 50, 39, 0.3);
+  color:rgba(39, 50, 39, 0.8);
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .review-btns button:hover,
+  .remove-filter-btn:hover,
+  .remove-filter-star:hover {
+    background-color: #646F58;
+    color:whitesmoke;
+  }
+
+  .new-review .privacy-auth {
+    color: whitesmoke;
+  }
+  #reviewImgUpload {
+    color: whitesmoke;
+  }
+
+}
+
+.ReactModal__Overlay,
+.ReactModal__Overlay--after-open {
+  background: rgba(39, 50, 39, 0.5);
+
+}
+.new-review {
+  /* background-color: rgba(255, 255, 255, 0.75); */
+  position: absolute;
+  margin: 0 auto;
+  inset: 40px;
+  border: 0.5px solid rgb(204, 204, 204);
+  background: rgb(255, 250, 242);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  max-width: 80%;
+}
+
+.new-review h5 {
+  font-size: 16px;
+  color: #556b2f;
+}
+
+.privacy-auth {
+  font-weight: 400;
+  color: rgba(39, 50, 39, 0.3);
+  font-variant: small-caps;
+}
+
+.overlay-new-review {
+  background-color: rgba(39, 50, 39, 0.5);
+  position: fixed;
+  inset: 0px;
+}
+
+#new-review-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 4px;
+}
+
+#new-review-close:hover {
+  cursor: pointer;
+}
+
+/* Review Tile Styling */
+.reviewTileContainer {
+  /* border: 0.5px solid rgba(39, 50, 39, 0.3); */
+  /* box-shadow: 1px 0.5px 2px grey; */
+  min-height: 200px;
+  padding: 0% 0% 1% 0%;
+  margin: 1% 1% 0% 1%;
+  border: 1px solid rgba(39, 50, 39, 0.3);
+  border-style: none none solid none;
+  text-size-adjust: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stars-filter:hover {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.Rating-And-Name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgba(39, 50, 39, 0.6);
+  text-size-adjust: auto;
+}
+.Rating-And-Name h5 {
+  font-size: 16px;
+  padding-bottom: 1%;
+  color:rgba(39, 50, 39, 0.8);
+  text-size-adjust: auto;
+}
+
+.Name-And-Date {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-style: italic;
+  text-size-adjust: auto;
+}
+
+.reviewName {
+  padding-right: 5px;
+  text-size-adjust: auto;
+}
+
+.reviewDate {
+  text-size-adjust: auto;
+}
+
+.reviewSum {
+  font-size: 16px;
+  text-size-adjust: auto;
+}
+
+p.recommended {
+  color: rgba(39, 50, 39, 0.6);
+  line-height: 8px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  font-weight: 400;
+  font-style: oblique;
+  text-size-adjust: auto;
+}
+
+.HelpfulOrReport {
+  display: flex;
+  justify-self: end;
+  color: rgba(39, 50, 39, 0.7);
+  font-size: 14px;
+}
+.HelpfulOrReport a {
+  font-size: inherit;
+  color: inherit;
+}
+
+.HelpfulOrReport a:hover {
+  font-style: italic;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+i.helpfultrue {
+  color:rgb(218, 165, 32);
+}
+
+
+/* Review Tile Expanded styling */
+.expandedPhoto {
+  /* display: flex; */
+  justify-self: end;
+  max-width: 50%;
+}
+
+.overlayExpandedPhoto {
+  background-color: rgba(39, 50, 39, 0.5);
+  position: fixed;
+  inset: 0px;
+}
+
+.singlePhoto {
+  position: relative;
+  margin:auto;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.singlePhotoContainer {
+  max-width: 30%;
+  left: 35%;
+  top: 15%;
+  position: absolute;
+  background-color: hwb(12 91% 7%);
+  box-shadow: 1px 1px 5px grey;
+  object-fit: cover;
+  object-position: 30% 30%;
+}
+
+.closeButtonContainer {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  background-color: rgb(148, 148, 148);
+}
+
+svg.close {
+  margin: 0 auto;
+  margin-top: 3.5px;
+  right: 15%;
+  color: rgb(112, 10, 10);
+}
+svg.close:hover {
+  color: brown;
+}
+
