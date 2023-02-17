@@ -15,7 +15,7 @@ const ReviewTile = ({ review, markHelpful, reportReview }) => {
   if (process.env.NODE_ENV !== 'test') {
     Modal.setAppElement('#root');
   }
-
+  console.log(review);
   let starsMapper = (rating) => {
     let starFilled = '★';
     let starEmpty = '☆';
@@ -38,7 +38,7 @@ const ReviewTile = ({ review, markHelpful, reportReview }) => {
 
   const clickHelper = () => {
     if (!helpClicked) {
-      markHelpful(review.review_id);
+      markHelpful(review.id);
       setHelpfulCount(() => helpfulCount + 1);
       setClicked(true);
     }
@@ -85,7 +85,7 @@ const ReviewTile = ({ review, markHelpful, reportReview }) => {
       </div>
       <div className="HelpfulOrReport">
         <span>Helpful? <a onClick={() => clickHelper() }role="click-helpful">Yes<i className={'helpful' + helpClicked}>({helpfulCount})</i> |</a></span>
-        <span><a onClick={()=> reportReview(review.review_id)} role="click-report">&nbsp;Report</a></span>
+        <span><a onClick={()=> reportReview(review.id)} role="click-report">&nbsp;Report</a></span>
       </div>
       <Modal className="expandedPhoto" overlayClassName="overlayExpandedPhoto" isOpen={modalIsOpen} onRequestClose={closeModal}>
           <div className="singlePhotoContainer">

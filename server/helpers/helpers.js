@@ -17,6 +17,24 @@ let getProducts = (query) => {
     });
 };
 
+let getReviews = (query) => {
+  let options = {
+    method: 'get',
+    url: `http://localhost:8080/${query}`,
+    headers: {
+      'User-Agent': 'request',
+      'Authorization': `${process.env.TOKEN}`
+    }
+    // params: {
+    //   count: 10
+    // }
+  };
+  console.log(options)
+  return axios(options).catch(err => {
+    //console.error(err);
+    });
+};
+
 let postProducts = (query, data) => {
   let options = {
     method: 'post',
@@ -40,7 +58,7 @@ let postProducts = (query, data) => {
 let postReview = (query, data) => {
   let options = {
     method: 'post',
-    url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfe/${query}`,
+    url: `http://localhost:8080/${query}`,
     headers: {
       'User-Agent': 'request',
       'Authorization': `${process.env.TOKEN}`
@@ -82,6 +100,21 @@ let postAnswer = (query, data) => {
     });
 }
 
+let markHelpfulOrReportReview = (query) => {
+  let options = {
+    method: 'put',
+    url: `http://localhost:8080/${query}`,
+    headers: {
+      'User-Agent': 'request',
+      'Authorization': `${process.env.TOKEN}`
+    }
+
+  }
+  return axios(options).catch(err => {
+    console.error(err);
+    });
+}
+
 let markHelpfulOrReport = (query) => {
   let options = {
     method: 'put',
@@ -100,7 +133,9 @@ let markHelpfulOrReport = (query) => {
 
 
 module.exports.getProducts = getProducts;
+module.exports.getReviews = getReviews;
 module.exports.markHelpfulOrReport = markHelpfulOrReport;
+module.exports.markHelpfulOrReportReview = markHelpfulOrReportReview;
 module.exports.postProducts = postProducts;
 module.exports.postAnswer = postAnswer;
 module.exports.postReview = postReview;

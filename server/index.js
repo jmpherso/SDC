@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
-const {getProducts, markHelpfulOrReport, postProducts, postAnswer} = require('./helpers/helpers.js')
+const {markHelpfulOrReportReview, postReview, getReviews, getProducts, markHelpfulOrReport, postProducts, postAnswer} = require('./helpers/helpers.js')
 
 
 const app = express();
@@ -39,9 +39,9 @@ app.get('/getReviews', (req, res) => {
   let query = '';
   query += req.query.product_id;
   let sortQuery = '';
-  sortQuery += req.query.sort;
+  sortQuery += req.query.sort; //relevant, 37311
 
-  getProducts(`reviews/?product_id=${query}&sort=${sortQuery}&count=250`)
+  getReviews(`reviews/?product_id=${query}&sort=${sortQuery}&count=250`)
     .then(data => {
       res.json(data.data);
     })
@@ -50,9 +50,9 @@ app.get('/getReviews', (req, res) => {
 
 app.get('/getReviewsMeta', (req, res) => {
   let query = '';
-  query += req.query.product_id;
+  query += req.query.product_id; //37311
 
-  getProducts(`reviews/meta/?product_id=${query}`)
+  getReviews(`reviews/meta/?product_id=${query}`)
     .then(data => {
       res.json(data.data)
     })
@@ -108,18 +108,18 @@ app.post('/addAnswer', (req, res) => {
 app.put('/markReviewHelpful', (req, res) => {
   let query = '';
   query += req.query.review_id;
-  // console.log(query)
+  console.log(query)
 
-  markHelpfulOrReport(`reviews/${query}/helpful`)
+  markHelpfulOrReportReview(`reviews/${query}/helpful`)
     .then(() => console.log(`Review ${query} was marked helpful!`))
     .catch(err => console.log(err));
 })
 app.put('/reportReview', (req, res) => {
   let query = '';
   query += req.query.review_id;
-  // console.log(query)
+  console.log(query)
 
-  markHelpfulOrReport(`reviews/${query}/report`)
+  markHelpfulOrReportReview(`reviews/${query}/report`)
     .then(() => console.log(`Review ${query} reported`))
     .catch(err => console.log(err));
 })

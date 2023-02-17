@@ -136,16 +136,21 @@ const RateAndReview = ({ product_id, productRating, setProductRating, totalNumRe
   }
 
   const markHelpful = (reviewId) => {
+    console.log(reviewId)
     axios.put(`markReviewHelpful/?review_id=${reviewId}`)
-      .then(() => console.log('marked!'))
+      .then(() => {
+        console.log('marked!')
+      })
       .catch(err => console.log(err));
   }
 
   const reportReview = (reviewId) => {
+    console.log(reviewId)
     axios.put(`reportReview/?review_id=${reviewId}`)
     .then(() => {
       console.log('marked!')
-      setReviewReported((prev) => !prev)})
+      setReviewReported((prev) => (!prev))
+    })
     .catch(err => console.log(err));
   }
 
@@ -184,7 +189,7 @@ const RateAndReview = ({ product_id, productRating, setProductRating, totalNumRe
 
   return (
     <StyledRatingsAndReviews data-testid="rating-main" id="rlink"  onClick={(e) => handleDataClick(e, 'Ratings&Review')}>
-      <h4 id="randrtitle">Ratings & Reviews</h4>
+      <h4 id="randrtitle">RAAAAatings & Reviews</h4>
       <div id="randr">
         <div id="breakdown">
           <RatingBreakdown id="rating-breakdown" productRating={productRating}
