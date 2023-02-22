@@ -43,6 +43,7 @@ app.get('/getReviews', (req, res) => {
 
   getReviews(`reviews/?product_id=${query}&sort=${sortQuery}&count=250`)
     .then(data => {
+      console.log(data);
       res.json(data.data);
     })
     .catch(err => console.log(err));
