@@ -20,7 +20,7 @@ let getProducts = (query) => {
 let getReviews = (query) => {
   let options = {
     method: 'get',
-    url: `http://ec2-13-58-197-204.us-east-2.compute.amazonaws.com:8080/${query}`,
+    url: `http://ec2-3-14-4-159.us-east-2.compute.amazonaws.com:8080/${query}`,
     // params: {
     //   count: 10
     // }
@@ -54,7 +54,7 @@ let postProducts = (query, data) => {
 let postReview = (query, data) => {
   let options = {
     method: 'post',
-    url: `http://ec2-13-58-197-204.us-east-2.compute.amazonaws.com:8080/${query}`,
+    url: `http://ec2-3-14-4-159.us-east-2.compute.amazonaws.com:8080/${query}`,
     headers: {
       'User-Agent': 'request',
       'Authorization': `${process.env.TOKEN}`
@@ -99,7 +99,7 @@ let postAnswer = (query, data) => {
 let markHelpfulOrReportReview = (query) => {
   let options = {
     method: 'put',
-    url: `http://ec2-13-58-197-204.us-east-2.compute.amazonaws.com:8080/${query}`,
+    url: `http://ec2-3-14-4-159.us-east-2.compute.amazonaws.com:8080/${query}`,
     headers: {
       'User-Agent': 'request',
       'Authorization': `${process.env.TOKEN}`
